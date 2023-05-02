@@ -1,0 +1,155 @@
+.calendar-container {
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: #f6f5f4;
+    color: #f80000;
+  }
+  h1 {
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+  }
+  .calendar {
+    padding: 0 50px 30px 50px ;
+    border-collapse:collapse;
+    
+  }
+  th,td{
+    border: 2px #808080 solid;
+  }
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  td {
+    text-align: center;
+    padding: 10px;
+  }
+  /* 要らないかもしれない */
+  /* 最初のtr以外のすべてのtr要素に対してpaddingを適用
+  tr:not(:first-child)>*{
+    padding-bottom: 0.5rem;
+  } */
+  th {
+    font-weight: normal;
+    font-size: 14px;
+  }
+  td {
+    font-weight: bold;
+  }
+  /* 土日に装飾（日付） */
+  .day *:first-child {
+    color: #ff838b;
+  }
+  .day *:last-child {
+    color: #6fb5ff;
+  }
+  .day{
+    font-size: 1px;
+  }
+  /* 土日に装飾（曜日） */
+  .week th{
+    font-size: 1px;
+  }
+  .week *:first-child {
+    color: #ff838b;
+  }
+  .week *:last-child {
+    color: #6fb5ff;
+  }
+  p{
+    color: #808080 !important;
+
+    /* 後で使う。javascriptでもし6時出勤なら丸で囲む */
+    /* display: block;
+    border-radius: 50%;
+    color: #fff;
+    border: 1.5px solid;
+    border-color: #808080; */
+    
+  }
+
+
+
+
+
+
+  
+
+/*全体*/
+.wrapper{
+    max-width: 600px;
+    margin: 0 auto;
+    color: #666;
+}
+#header {
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+    margin: 1rem 0 0;
+}
+
+/*カレンダー*/
+#calendar {
+    text-align: center;
+    width: 100%;
+}
+table {
+    outline: 2px solid #ddd;
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    color: #000;
+}
+th, td {
+    outline: 1px solid #ddd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+/*日曜日*/
+td:first-child {
+    color: red;
+}
+/*土曜日*/
+td:last-child {
+    color: blue;
+}
+/*前後月の日付*/
+td.disabled {
+    color: #ccc;
+}
+/*本日*/
+td.today {
+    background-color: #D65E72;
+    color: #fff;
+}
+
+/*ボタン*/
+#next-prev-button {
+    position: relative;
+}
+#next-prev-button button{
+    cursor: pointer;
+    background: #B78D4A;
+    color: #fff;
+    border: 1px solid #B78D4A;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0;
+}
+#next-prev-button button:hover{
+    background-color: #D4BB92;
+    border-color: #D4BB92;
+}
+#prev {
+    float: left;
+}
+#next {
+    float: right;
+}
